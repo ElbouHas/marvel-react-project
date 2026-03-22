@@ -1,0 +1,35 @@
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;
+
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+
+  background: linear-gradient(135deg, #ff2d2d, #c1121f);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(230, 36, 41, 0.28);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+}
