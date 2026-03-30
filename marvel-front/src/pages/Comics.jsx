@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Comics.css";
+import Loader from "../components/Loader";
 
 function Comics() {
   const [data, setData] = useState(null);
