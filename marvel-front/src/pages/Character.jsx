@@ -18,7 +18,9 @@ function Character() {
   //  Appel API au chargement du composant ou quand l'id change
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`http://localhost:3000/character/${id}`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/character/${id}`,
+      );
 
       // On stok les données reçues
       setData(response.data);

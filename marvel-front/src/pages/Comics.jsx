@@ -17,7 +17,7 @@ function Comics() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/comics?title=${search}&page=${page}&limit=100`,
+          `${import.meta.env.VITE_API_URL}/comics?title=${search}&page=${page}&limit=100`,
         );
         setData(response.data);
         setIsLoading(false);
