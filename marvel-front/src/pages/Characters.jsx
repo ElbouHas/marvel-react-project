@@ -20,6 +20,7 @@ function Characters() {
     setFavorites(storedFavorites);
   }, []);
 
+  console.log(import.meta.env.VITE_API_URL);
   // Appel API avec filtres (search + page)
   useEffect(() => {
     const fetchData = async () => {
